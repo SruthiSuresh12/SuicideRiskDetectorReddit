@@ -1,0 +1,31 @@
+<!-- templates/form.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Reddit Suicide Risk Detector</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="centered-container">
+    <div id="welcome-message">
+      <h2>Hey, welcome to the Suicide Risk Detector</h2>
+    </div>
+    <form id="risk-form" method="post" style="display: none;">
+      <label for="url">Reddit Post URL:</label>
+      <input type="text" name="url" id="url" placeholder="Paste Reddit post link here">
+      <input type="submit" value="Predict">
+    </form>
+  </div>
+  <script>
+    window.onload = function() {
+      setTimeout(function() {
+        document.getElementById('welcome-message').style.display = 'none';
+        document.getElementById('risk-form').style.display = 'flex';
+      }, 3600);
+    };
+  </script>
+</body>
+</html>
+
+
