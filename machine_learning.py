@@ -1,16 +1,6 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Jul 14 17:44:21 2025
-
-@author: sruth
-"""
-
 import pandas as pd
 
-# Load preprocessed CSV (ensure it has 'title', 'post_text', 'label', 'clean_text')
 df = pd.read_csv("reddit_posts_preprocessed.csv")
-
-# Optional: Remove duplicates and empty entries if not already done
 df = df.drop_duplicates(subset=["post_id"])
 df = df.dropna(subset=["title", "post_text"])
 df = df[(df["title"].str.strip() != "") | (df["post_text"].str.strip() != "")]
