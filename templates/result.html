@@ -1,0 +1,23 @@
+<!-- templates/result.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Prediction Result</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="centered-container">
+    <div class="result-container {{ label }}">
+      <h2>
+        {% if label == "high-risk" %}
+          High Risk Detected
+        {% else %}
+          Neutral Post
+        {% endif %}
+      </h2>
+      <a href="/" class="button-link">Try another</a>
+    </div>
+  </div>
+</body>
+</html>
