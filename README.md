@@ -68,3 +68,5 @@ Run the Flask app:
 python app.py
 ```
 Open your browser at http://127.0.0.1:5000/ and submit a Reddit post URL for risk evaluation.
+
+P.S. I tried the same project with deep learning algorithms like Long-Term Short Memory and Convoluted Neural Networks, so I've added those files here as well, but they're not absolutely necessary to download.
