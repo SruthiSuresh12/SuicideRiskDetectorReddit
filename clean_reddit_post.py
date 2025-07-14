@@ -7,8 +7,8 @@ import asyncio
 
 async def fetch_posts():
     reddit = asyncpraw.Reddit(
-        client_id="2eX3T9gzL07MzGepVqB_-A",
-        client_secret="VS-2e-FyNOoXKMC5YttUOe4CJHiw0A",
+        client_id="YOUR_CLIENT_ID",
+        client_secret="YOUR_CLIENT_SECRET",
         user_agent="DepressionWatcher"
     )
 
